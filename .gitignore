@@ -1,0 +1,24 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+env/
+.env
+
+# Data & model artifacts (do not commit)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+models/*.pt
+models/*.pth
+artifacts/metrics/*
+artifacts/plots/*
+artifacts/error_analysis/*
+!artifacts/**/.gitkeep
+!models/.gitkeep
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/

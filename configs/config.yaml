@@ -1,0 +1,38 @@
+seed: 42
+
+paths:
+  data_raw: "data/raw/dataset"
+  data_processed: "data/processed"
+  models_dir: "models"
+  artifacts_dir: "artifacts"
+  checkpoint: "models/best_model.pt"
+
+data:
+  image_height: 256
+  image_width: 704
+  num_classes: 2
+  class_names: ["Normal", "Defective"]
+  val_split: 0.15
+  num_workers: 2
+
+augmentation:
+  rotation_deg: 5
+  translate_frac: 0.02
+  brightness: 0.1
+  contrast: 0.1
+  horizontal_flip: false
+
+training:
+  architecture: "efficientnet_b0"
+  pretrained: true
+  batch_size: 16
+  epochs: 25
+  lr: 0.0001
+  weight_decay: 0.0001
+  patience: 5
+  use_class_weights: true
+  freeze_backbone_epochs: 2
+
+inference:
+  threshold: 0.5   # overwritten after validation threshold sweep
+  max_upload_mb: 10
