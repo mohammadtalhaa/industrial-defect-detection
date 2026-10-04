@@ -1,5 +1,8 @@
 # Industrial Defect Detection — Computer Vision Technical Assessment
 
+<img width="2023" height="1608" alt="image" src="https://github.com/user-attachments/assets/6545dda1-8a28-48ff-9e6b-5dcd8ab04726" />
+
+
 Binary image classifier that decides whether a manufactured surface is **Normal** or **Defective**, exposed through a FastAPI inference service and packaged for Docker.
 
 > **Dataset disclosure.** The company intended to provide a proprietary dataset of production-line images. That dataset was not received before the submission deadline. After checking with the recruiter, this project uses **KolektorSDD2** (Kolektor Surface-Defect Dataset 2, ViCoS Lab, University of Ljubljana) as the development dataset. Source: https://www.vicos.si/resources/kolektorsdd2/. Licence: CC BY-NC-SA 4.0 — **non-commercial research use only**. The codebase is dataset-agnostic: point `paths.data_raw` at the company's dataset and rerun `scripts/make_splits.py` + training.
